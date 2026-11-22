@@ -42,7 +42,7 @@ h1 em{font-style:normal;background:linear-gradient(90deg,var(--gold),var(--gold2
 .portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(7,9,15,.8));pointer-events:none}
 .portrait .cap{position:absolute;left:16px;right:16px;bottom:14px;z-index:2;font-size:.8rem;color:#dfe5f3}
 .live{display:flex;gap:16px;align-items:center;flex-wrap:wrap;background:linear-gradient(135deg,rgba(255,107,107,.12),rgba(242,184,75,.08));border:1px solid rgba(255,107,107,.4);border-radius:var(--r);padding:18px 22px;margin-top:34px}
-.live .badge{background:var(--red);color:#1a0505;font-weight:800;font-size:.72rem;letter-spacing:.12em;padding:5px 11px;border-radius:7px;text-transform:uppercase;animation:pulse 1.8s infinite}
+.live .badge{background:var(--gold);color:#1a1204;font-weight:800;font-size:.72rem;letter-spacing:.12em;padding:5px 11px;border-radius:7px;text-transform:uppercase;animation:pulse 1.8s infinite}
 @keyframes pulse{50%{opacity:.55}}
 .live p{color:#f1d9d9;font-size:.96rem}
 .live a{color:var(--gold);font-weight:600;text-decoration:underline}
@@ -111,6 +111,18 @@ footer a{color:var(--gold)}
 .pg .go{margin-top:auto;padding-top:6px;color:var(--gold);font-weight:600;font-size:.88rem}
 .pg .go i{font-style:normal;display:inline-block;transition:.25s transform}
 .pg:hover .go i{transform:translateX(6px)}
+.vid-wrap{margin-top:30px;display:grid;grid-template-columns:1.4fr .6fr;gap:22px;align-items:center}
+@media(max-width:900px){.vid-wrap{grid-template-columns:1fr}}
+.vid{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:16/9}
+a.vid{display:block;background:linear-gradient(135deg,#141c31,#0a0f1a)}
+.vid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85;transition:.4s transform,.4s opacity}
+.vid:hover img{transform:scale(1.04);opacity:1}
+.vid .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;display:grid;place-items:center;font-size:1.8rem;padding-left:5px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1204;box-shadow:0 10px 36px rgba(0,0,0,.5);transition:.3s transform}
+.vid:hover .play{transform:translate(-50%,-50%) scale(1.1)}
+.vid .vcap{position:absolute;left:0;right:0;bottom:0;padding:34px 18px 14px;background:linear-gradient(180deg,transparent,rgba(7,9,15,.9));font-size:.86rem;color:#e9edf6}
+.vid-side{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.vid-side h3{font-size:1.15rem;margin-bottom:8px}
+.vid-side p{color:var(--muted);font-size:.94rem;margin-bottom:16px}
 </style>
 </head>
 <body>
@@ -124,6 +136,7 @@ footer a{color:var(--gold)}
     <li><a href="#records">Records</a></li>
     <li><a href="#recognition">Recognition</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#ipawards">IP Awards</a></li>
     <li><a href="#pages">Live Pages</a></li>
     <li><a href="#frameworks">Research</a></li>
     <li><a href="#proof">Proof</a></li>
@@ -149,8 +162,8 @@ footer a{color:var(--gold)}
   </div>
 
   <div class="live">
-    <span class="badge">On TV</span>
-    <p><b>India News telecast:</b> India Book of Records has selected my record for a special feature on India News. It airs <b>22 November 2026 at 5:30 AM IST</b>. <a target="_blank" rel="noopener" href="https://www.youtube.com/@IndiaNews">Watch live on the India News channel</a>.</p>
+    <span class="badge">As seen on TV</span>
+    <p><b>Featured on India News:</b> India Book of Records selected my record for a special feature on India News. My interview was telecast on <b>22 November 2026 at 5:30 AM IST</b>.</p>
   </div>
 
   <div class="stats reveal">
@@ -250,8 +263,7 @@ footer a{color:var(--gold)}
     <div class="card">
       <span class="tag t-red">Television</span>
       <h3>Featured on India News</h3>
-      <p>India Book of Records selected this achievement for a special feature on India News, airing 22 November 2026 at 5:30 AM IST. The invitation email came from the IBR social media team.</p>
-      <a class="lnk" target="_blank" rel="noopener" href="https://www.youtube.com/@IndiaNews">India News channel ↗</a>
+      <p>India Book of Records selected this achievement for a special feature on India News. My interview was telecast on 22 November 2026 at 5:30 AM IST.</p>
     </div>
     <div class="card">
       <span class="tag t-info">Proposal</span>
@@ -299,6 +311,26 @@ footer a{color:var(--gold)}
     <div class="card proj"><span class="tag t-gold">Library</span><h3>Digital Library</h3><p>241+ publicly hosted research files, with Opal AI.</p><a class="lnk" target="_blank" rel="noopener" href="https://kallol-world-largest-digital-library.netlify.app/">Open the library ↗</a></div>
     <div class="card proj"><span class="tag t-gold">Concepts portal</span><h3>Original Concepts Portal</h3><p>A summary of DOI frameworks, original concepts and copyrights.</p><a class="lnk" target="_blank" rel="noopener" href="https://father-of-original-concepts-globally.netlify.app/">Open the portal ↗</a></div>
     <div class="card proj"><span class="tag t-gold">Repository</span><h3>SSRN, Figshare &amp; Knowledge Commons</h3><p>Publications from all three platforms in one portal.</p><a class="lnk" target="_blank" rel="noopener" href="https://helixoriginator.github.io/kallol-chakrabarti-ssrn-figshare-knowledgecommons-research/">Open the portal ↗</a></div>
+  </div>
+</div></section>
+
+<section id="ipawards" class="alt"><div class="wrap">
+  <div class="reveal">
+    <div class="eyebrow">On video</div>
+    <h2>Active participant, National IP Awards 2026</h2>
+    <p class="lead">Active participant in the National IP Awards 2026 at Bharat Mandapam, New Delhi, where I asked a question during the IP conference on catalysing research by youth and women.</p>
+  </div>
+  <div class="vid-wrap reveal">
+    <a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/live/lVu3AAtLoCQ?si=mDznqR_jxM-alkQa&t=3080s" aria-label="Watch the National IP Awards and IP Conference on YouTube">
+      <img src="https://i.ytimg.com/vi/lVu3AAtLoCQ/hqdefault.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+      <span class="play">▶</span>
+      <span class="vcap">National IP Awards &amp; IP Conference · opens at 51:20</span>
+    </a>
+    <div class="vid-side">
+      <h3>National IP Awards &amp; IP Conference</h3>
+      <p>IP for Catalyzing Research by Youth &amp; Women. My question begins at 51 minutes 20 seconds.</p>
+      <a class="btn primary" target="_blank" rel="noopener" href="https://www.youtube.com/live/lVu3AAtLoCQ?si=mDznqR_jxM-alkQa&t=3080s">Watch on YouTube ↗</a>
+    </div>
   </div>
 </div></section>
 
@@ -357,6 +389,7 @@ footer a{color:var(--gold)}
     <p class="lead">Every claim on this page has a source. Open the original files below.</p>
   </div>
   <div class="gal reveal">
+    <a target="_blank" rel="noopener" href="Kallol%20ABR%20Photo.jpeg"><img loading="lazy" src="Kallol%20ABR%20Photo.jpeg" alt="Kallol Chakrabarti with his Asia Book of Records Grandmaster certification" onerror="this.parentNode.style.display='none'"><span>With the Asia Book of Records Grandmaster certification</span></a>
     <a target="_blank" rel="noopener" href="Certificate%20of%20India%20Book%20of%20Record.jpeg"><img loading="lazy" src="Certificate%20of%20India%20Book%20of%20Record.jpeg" alt="India Book of Records certificate" onerror="this.parentNode.style.display='none'"><span>India Book of Records certificate</span></a>
     <a target="_blank" rel="noopener" href="ABR%20Certificate.jpeg"><img loading="lazy" src="ABR Certificate.jpeg" alt="Asia Book of Records Grandmaster certificate" onerror="this.parentNode.style.display='none'"><span>Asia Book of Records Grandmaster certificate</span></a>
     <a target="_blank" rel="noopener" href="Photo%20with%20medal%20of%20IBR.jpeg"><img loading="lazy" src="Photo%20with%20medal%20of%20IBR.jpeg" alt="Photo with IBR medal" onerror="this.parentNode.style.display='none'"><span>With the India Book of Records medal</span></a>
@@ -376,7 +409,7 @@ footer a{color:var(--gold)}
     <div><small>2025</small><h4>158 sole-authored DOI papers</h4><p>Published across Zenodo, DeSci Labs, SSRN and other open repositories.</p></div>
     <div><small>2026</small><h4>Becomes a record holder of both the India Book of Records and the Asia Book of Records</h4><p>Recognised for 158 sole-authored DOI papers in a single year.</p></div>
     <div><small>2026</small><h4>Joins ScienceOpen as Global Peer Reviewer</h4><p>Invited position in the Editorial &amp; Peer Review Division.</p></div>
-    <div class="next"><small>22 Nov 2026 · 5:30 AM IST</small><h4>Featured on India News</h4><p>National television telecast of the record.</p></div>
+    <div><small>22 Nov 2026 · 5:30 AM IST</small><h4>Interview telecast on India News</h4><p>My interview about the record was aired on national television.</p></div>
   </div>
 </div></section>
 
